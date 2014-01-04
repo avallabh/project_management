@@ -39,6 +39,8 @@ group :test, :development do
   gem 'shoulda'
   gem 'valid_attribute'
   gem 'launchy'
+  gem 'quiet_assets'
+  gem 'pry-rails'
 end
 
 gem 'simple_form'
