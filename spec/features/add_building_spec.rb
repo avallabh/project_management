@@ -30,4 +30,12 @@ feature 'user adds a building', %Q{
     expect(page).to have_content("1234 Awesome Street")
     expect(page).to_not have_content("can't be blank")
   end
+
+  scenario "don't submit all the required info" do
+    visit root_path
+    click_on "Add Building"
+    click_on "Save Building"
+
+    expect(page).to have_content("can't be blank")
+  end
 end
