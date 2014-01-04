@@ -1,6 +1,9 @@
 FactoryGirl.define do
+  sequence :address do |x|
+    "#{x}street Avenue"
+  end
   factory :property do
-    sequence(:address) { "1#{n} Avenue" }
+    address
     city "Cincinnati"
     state "OH"
     zip "12345"

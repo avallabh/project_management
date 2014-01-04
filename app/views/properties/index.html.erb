@@ -8,6 +8,7 @@
       <th>State</th>
       <th>Zip Code</th>
       <th>Description</th>
+      <th>Owner</th>
     </tr>
   </thead>
 
@@ -19,12 +20,14 @@
         <td><%= property.state %></td>
         <td><%= property.zip %></td>
         <td><%= property.description %></td>
+        <td><%= property.owner_id %></td>
       </tr>
     <% end %>
   </tbody>
 
 </table>
 <br>
-<h3><%= notice %></h3>
 <%= link_to 'Add Building', new_property_path %> |
  <%= link_to 'Add Owner', new_owner_path %>
+<br><br>
+<%= link_to 'List of Owners', '/owners' %>

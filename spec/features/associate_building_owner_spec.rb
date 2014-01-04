@@ -14,6 +14,21 @@ feature 'associate an owner with buildings', %Q{
 #   with any properties.
 
   scenario 'associate an owner with a building' do
+    place = FactoryGirl.create(:property)
+    person = FactoryGirl.create(:owner)
+
+    visit root_path
+    click_on "Add Building"
+    fill_in "Address", with: place.address
+    fill_in "City", with: place.city
+    select "Ohio", from: "State"
+    fill_in "Zip", with: place.zip
+    select place.owner_id, from: "Owner"
+    click_on "Save Building"
+
+    expect(page).to have_content('Building saved!')
+    expect(page).to have_content(place.address)
+    expect(page).to_not have_content("can't be blank")
 
   end
 
