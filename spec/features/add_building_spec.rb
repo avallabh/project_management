@@ -26,7 +26,7 @@ feature 'user adds a building', %Q{
     #fill_in "Description", with: "Yes"
     click_on "Save Building"
 
-    expect(page).to have_content('Building added')
+    expect(page).to have_content('Building saved!')
     expect(page).to have_content("1234 Awesome Street")
     expect(page).to_not have_content("can't be blank")
   end

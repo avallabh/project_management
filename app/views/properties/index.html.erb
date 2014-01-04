@@ -1,13 +1,13 @@
 <h1>List of Buildings</h1>
-
+<h3><%= notice %></h3>
 <table>
   <thead>
-    <tr><%= notice %></tr>
     <tr>
       <th>Address</th>
       <th>City</th>
       <th>State</th>
       <th>Zip Code</th>
+      <th>Description</th>
     </tr>
   </thead>
 
@@ -22,6 +22,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
 
+</table>
+<br>
 <%= link_to 'Add Building', new_property_path %>

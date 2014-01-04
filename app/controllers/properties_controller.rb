@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
   def index
+    @property = Property.all
   end
 
   def new
@@ -13,7 +14,7 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     if @property.save
-      redirect_to root_path, notice: 'Building added'
+      redirect_to root_path, notice: 'Building saved!'
     else
       render 'new'
     end
