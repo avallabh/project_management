@@ -16,4 +16,6 @@ describe Property do
   it { should have_valid(:zip).when('12345') }
   it { should_not have_valid(:zip).when(*blanks) }
 
+  it { should belong_to :owner }
+
 end

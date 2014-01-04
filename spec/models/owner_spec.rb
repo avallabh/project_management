@@ -11,4 +11,6 @@ describe Owner do
 
   it { should have_valid(:email).when('person@example.com') }
   it { should_not have_valid(:email).when(*blanks) }
+
+  it { should have_many :properties }
 end

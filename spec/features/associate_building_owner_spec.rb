@@ -15,7 +15,7 @@ feature 'associate an owner with buildings', %Q{
 
   scenario 'associate an owner with a building' do
     place = FactoryGirl.create(:property)
-    person = FactoryGirl.create(:owner)
+    email = "johnsmith@place.com"
 
     visit root_path
     click_on "Add Building"
@@ -23,7 +23,7 @@ feature 'associate an owner with buildings', %Q{
     fill_in "City", with: place.city
     select "Ohio", from: "State"
     fill_in "Zip", with: place.zip
-    select place.owner_id, from: "Owner"
+    select email, from: "Owner"
     click_on "Save Building"
 
     expect(page).to have_content('Building saved!')

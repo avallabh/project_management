@@ -20,7 +20,12 @@
         <td><%= property.state %></td>
         <td><%= property.zip %></td>
         <td><%= property.description %></td>
-        <td><%= property.owner_id %></td>
+        <td>
+          <% if !property.owner_id.nil? %>
+            <%= property.owner.email %>
+          <% else %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
