@@ -7,6 +7,6 @@ FactoryGirl.define do
     city "Cincinnati"
     state "OH"
     zip "12345"
-    # association :owner
+    association :owner
   end
 end

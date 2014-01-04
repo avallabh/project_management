@@ -20,6 +20,11 @@ class OwnersController < ApplicationController
     end
   end
 
+  def destroy
+    Owner.find(params[:id]).destroy
+    redirect_to '/owners', notice: "Owner was deleted"
+  end
+
   protected
   def owner_params
     params.require(:owner).permit(:first_name, :last_name, :email, :company)
