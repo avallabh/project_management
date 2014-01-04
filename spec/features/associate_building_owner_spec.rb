@@ -29,7 +29,5 @@ feature 'associate an owner with buildings', %Q{
     expect(page).to have_content('Building saved!')
     expect(page).to have_content(place.address)
     expect(page).to_not have_content("can't be blank")
-
   end
-
 end
