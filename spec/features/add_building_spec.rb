@@ -6,7 +6,6 @@ feature 'user adds a building', %Q{
   So that I can refer back to pertinent information
 } do
 
-
   # Acceptance Criteria:
 
   # I must specify a street address, city, state, and postal code
