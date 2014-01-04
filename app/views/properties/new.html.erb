@@ -1,0 +1,12 @@
+<h1>Add Building</h1>
+
+<%= simple_form_for(@property) do |f| %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :state %>
+  <%= f.input :zip %>
+  <%= f.input :description %>
+  <%= f.button :submit, 'Save Building' %>
+<% end %>
+<br>
+<%= link_to 'Back to Home', root_path %>
