@@ -21,7 +21,7 @@ feature 'user adds a building', %Q{
     click_on "Add Building"
     fill_in "Address", with: "1234 Awesome Street"
     fill_in "City", with: "Boston"
-    fill_in "State", with: "OH - Ohio"
+    select 'Ohio', from: "State"
     fill_in "Zip", with: "12345"
     #fill_in "Description", with: "Yes"
     click_on "Save Building"
